@@ -1,0 +1,67 @@
+export default [
+    { id: 'rank', label: '#', minWidth: 100, align: 'center' },
+    {
+      id: 'country',
+      label: 'Country',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'cases',
+      label: 'Cases',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'deaths',
+      label: 'Deaths',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'critical',
+      label: 'Critical',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'recovered',
+      label: 'Recovered',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'casesToday',
+      label: `Today's Cases`,
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'deathsToday',
+      label: `Today's Deaths`,
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'casesPer1M',
+      label: 'Cases Per 1M',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+    {
+      id: 'deathsPer1M',
+      label: 'Deaths Per 1M',
+      minWidth: 170,
+      align: 'center',
+      format: (value) => value.toLocaleString('en-US'),
+    },
+  ];
+  

@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App__container {
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 60em) {
+  .App__padding-vertical {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .App__container {
+    margin: 0 auto;
+
+    max-width: 65rem;
+    width: 100%;
+    padding: 0;
+  }
+}
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
+
+.table {
+  min-width: 700px;
+}
+
+.tableCells:not(:last-child) {
+  /*border-bottom: 0;*/
+  border-right: 1px solid rgba(224, 224, 224, 1);
+}
+
+/*
+.tableCells:last-child {
+  border-bottom: 0;
+}
+*/
+
+.overtime {
+  padding: 1.75rem 0.75rem;
+}
+
+.overtime__title {
+  font-size: 1.75rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .overtime__title {
+    font-size: 1.75rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 37.5em) {
+  .overtime__title {
+    font-size: 2.125rem;
+    text-align: center;
   }
 }
