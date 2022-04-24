@@ -1,44 +1,34 @@
 import React from "react";
-import { Circle, Map, TileLayer } from "react-leaflet";
+import { Circle, Map } from "react-leaflet";
 import Skeleton from "../Skeleton/Skeleton.jsx";
 
-export default class Leaflet extends React.Component {
-  render() {
-    const position = [35, -40];
-    const zoom = 2;
-    return (
-      <Map center={position} zoom={zoom}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution={
-            '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          }
-        />
-        {this.props.infectedOn && (
-          <MyCircles
-            data={this.props.infectedData}
-            date={this.props.date}
-            color="red"
-          />
-        )}
-        {this.props.recoveredOn && (
-          <MyCircles
-            data={this.props.recoveredData}
-            date={this.props.date}
-            color="green"
-          />
-        )}
-        {this.props.deathOn && (
-          <MyCircles
-            data={this.props.deathData}
-            date={this.props.date}
-            color="black"
-          />
-        )}
-      </Map>
-    );
-  }
-}
+const Leaflet = ({
+  infectedData,
+  infectedOn,
+  recoveredData,
+  recoveredOn,
+  deathData,
+  deathOn,
+  date,
+}) => {
+  const position = [35, -40];
+  const zoom = 2;
+  return (
+    <Map center={position} zoom={zoom}>
+      {/* <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution={
+          '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }
+      /> */}
+      {/* {infectedOn && <MyCircles data={infectedData} date={date} color="red" />}
+      {recoveredOn && (
+        <MyCircles data={recoveredData} date={date} color="green" />
+      )}
+      {deathOn && <MyCircles data={deathData} date={date} color="black" />} */}
+    </Map>
+  );
+};
 
 const MyCircles = (props) =>
   props.data.map((row, i) => {
@@ -60,3 +50,5 @@ const MyCircles = (props) =>
     }
     return <Skeleton key={i} />;
   });
+
+export default Leaflet;

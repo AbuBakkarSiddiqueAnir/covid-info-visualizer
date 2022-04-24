@@ -5,7 +5,6 @@ import Brightness7RoundedIcon from "@material-ui/icons/Brightness7Rounded";
 import React, { useContext } from "react";
 import { ReactComponent as Logo } from "../../assets/coronavirus.svg";
 import { ThemeContext } from "../../context/ThemeContext";
-import LinkButton from "../LinkButton/LinkButton.jsx";
 
 const useStyles = makeStyles({
   headerContainer: {
@@ -54,7 +53,7 @@ const Header = ({ location }) => {
   return (
     <header className={classes.header}>
       <div className={classes.headerTop}>
-        <LinkButton location={location} />
+        {/* <LinkButton location={location} /> */}
 
         <div className={classes.iconButton}>
           <IconButton

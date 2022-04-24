@@ -9,7 +9,7 @@ import { ThemeContext } from './context/ThemeContext';
 import { themeDark, themeLight } from './utils/rootStyles';
 
 const Home = lazy(() => import('./pages/Home/Home.jsx'));
-const Overtime = lazy(() => import('./pages/Overtime/Overtime.jsx'));
+
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -27,7 +27,7 @@ const App = () => {
             <Suspense fallback={<Skeleton />}>
               <Routes>
                 <Route  path="/" element={<Home setLocation={setLocation}/>} />
-                <Route  path="/overtime" element={<Overtime setLocation={setLocation}/>} />
+                {/* <Route  path="/overtime" element={<Overtime setLocation={setLocation}/>} /> */}
               </Routes>
             </Suspense>
             <Footer />

@@ -10,7 +10,7 @@ const Chart = lazy(() => import("../../components/Chart/Chart.jsx"));
 const Home = ({ setLocation }) => {
   useEffect(() => {
     setLocation("home");
-  }, [setLocation]);
+  });
 
   return (
     <div className="homepage">
